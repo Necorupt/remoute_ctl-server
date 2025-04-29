@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "makeDbg",
+            "type": "shell",
+            "command": "make debug -j16"
+        }, 
+        {
+            "label": "makeRelease",
+            "type": "shell",
+            "command": "make all -j16"
+        },
+        {
+            "label": "makeTest",
+            "type": "shell",
+            "command": "make test -j16"
+        }
+    ]
+}
