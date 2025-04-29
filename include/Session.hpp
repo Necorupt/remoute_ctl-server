@@ -1,11 +1,14 @@
 #ifndef __SESSION_HPP__
 #define __SESSION_HPP__
+#define BOOST_SPIRIT_DEBUG
 
 #include <memory>
 #include <array>
 #include <boost/asio.hpp>
 
 namespace asio = boost::asio;
+
+#include "Protocol.hpp"
 
 class Session
     : public std::enable_shared_from_this<Session>
@@ -19,6 +22,9 @@ public:
 private:
     void do_read();
     void do_write();
+
+    void execMessage(PROTO_MESSAGE_T message);
+    void sendHandshake();
 
     asio::ip::tcp::socket m_socket;
     std::array<char, 8192> m_buffer;
