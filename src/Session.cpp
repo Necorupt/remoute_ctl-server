@@ -9,6 +9,7 @@ Session::Session(asio::ip::tcp::socket socket) : m_socket(std::move(socket))
 
 void Session::start()
 {
+    this->do_read();
 }
 
 void Session::do_read()

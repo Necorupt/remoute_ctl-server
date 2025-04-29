@@ -15,7 +15,7 @@ public:
     static Root *getPtr();
 
 private:
-    Server m_server = Server("192.168.1.200", LISTEN_PORT);
+    Server m_server = Server("192.168.1.190", LISTEN_PORT);
     static Root *m_instance;
 
     int port = 0;

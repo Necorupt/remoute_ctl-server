@@ -32,7 +32,8 @@ void Server::accept()
                 auto session = std::make_shared<Session>(std::move(socket));
 
                 session->start();
-                
+                std::cout<< ec.what() <<std::endl;
+
                 std::cout << "CLIENT CONNECTED" << std::endl;
             }
 
