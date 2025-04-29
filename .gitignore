@@ -1,0 +1,5 @@
+public/server_dbg
+public/server
+
+*.o
+obj
